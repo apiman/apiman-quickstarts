@@ -8,6 +8,7 @@
   </parent>
   <artifactId>apiman-quickstarts-echo-service</artifactId>
   <packaging>war</packaging>
+  <name>apiman-quickstarts-echo-service</name>
   <dependencies>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
