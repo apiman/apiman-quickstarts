@@ -4,7 +4,7 @@
 
   <groupId>io.apiman</groupId>
   <artifactId>apiman-quickstarts</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0.Alpha4</version>
   <packaging>pom</packaging>
 
   <description>This project contains quickstarts for apiman.</description>
