@@ -33,3 +33,14 @@ Then the response payload might be this:
   }
 }
 ----
+
+Deployment
+==========
+
+To deploy this demo to a running WildFly 8.x server, simply execute the following commands:
+
+----
+cd apiman-quickstarts/echo-service
+mvn clean install
+mvn wildfly:deploy
+----
