@@ -55,6 +55,16 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 
+    <version.javadoc.plugin>2.10.1</version.javadoc.plugin>
+    <version.compiler.plugin>3.2</version.compiler.plugin>
+    <version.source.plugin>2.4</version.source.plugin>
+    <version.resources.plugin>2.7</version.resources.plugin>
+    <version.war.plugin>2.5</version.war.plugin>
+    <version.wildfly.plugin>1.0.2.Final</version.wildfly.plugin>
+
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+
     <!-- Distribution URLs -->
     <jboss.releases.repo.url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</jboss.releases.repo.url>
     <jboss.snapshots.repo.url>https://repository.jboss.org/nexus/content/repositories/snapshots/</jboss.snapshots.repo.url>
@@ -81,13 +91,72 @@
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${version.compiler.plugin}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${version.javadoc.plugin}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${version.resources.plugin}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${version.source.plugin}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>${version.war.plugin}</version>
+        </plugin>
+        <plugin>
           <groupId>org.wildfly.plugins</groupId>
           <artifactId>wildfly-maven-plugin</artifactId>
-          <version>1.0.2.Final</version>
+          <version>${version.wildfly.plugin}</version>
         </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <showDeprecation>false</showDeprecation>
+          <showWarnings>false</showWarnings>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <inherited>false</inherited>
