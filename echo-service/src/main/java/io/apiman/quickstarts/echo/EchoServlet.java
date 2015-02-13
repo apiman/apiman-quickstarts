@@ -43,6 +43,33 @@ public class EchoServlet extends HttpServlet {
      */
     public EchoServlet() {
     }
+    
+    /**
+     * @see javax.servlet.http.HttpServlet#doOptions(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+     */
+    @Override
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
+            IOException {
+        doEchoResponse(req, resp, false);
+    }
+    
+    /**
+     * @see javax.servlet.http.HttpServlet#doHead(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+     */
+    @Override
+    protected void doHead(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
+            IOException {
+        doEchoResponse(req, resp, false);
+    }
+    
+    /**
+     * @see javax.servlet.http.HttpServlet#doTrace(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+     */
+    @Override
+    protected void doTrace(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
+            IOException {
+        doEchoResponse(req, resp, false);
+    }
 
     /**
      * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)

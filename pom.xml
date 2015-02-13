@@ -85,6 +85,7 @@
 
   <modules>
     <module>echo-service</module>
+    <module>elasticsearch</module>
   </modules>
 
   <build>
@@ -186,4 +187,3 @@
   </build>
 
 </project>
-
