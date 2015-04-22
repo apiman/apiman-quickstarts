@@ -83,7 +83,7 @@ public class EchoResponse {
     private String method;
     private String resource;
     private String uri;
-    private Map<String, String> headers = new HashMap<String, String>();
+    private Map<String, String> headers = new HashMap<>();
     private Long bodyLength;
     private String bodySha1;
     
