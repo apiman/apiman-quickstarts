@@ -18,6 +18,7 @@
         <exclude>**/.gitignore</exclude>
         <exclude>**/target/**</exclude>
         <exclude>src/**</exclude>
+        <exclude>release.sh</exclude>
       </excludes>
       <directoryMode>0755</directoryMode>
       <fileMode>0755</fileMode>
