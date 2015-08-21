@@ -10,7 +10,6 @@ BRANCH=`git rev-parse --abbrev-ref HEAD`
 echo "** Current Branch: $BRANCH **"
 echo ""
 
-
 RELEASE_VERSION=$1
 DEV_VERSION=$2
 
@@ -28,6 +27,15 @@ echo "######################################"
 echo "Release Version: $RELEASE_VERSION"
 echo "Dev Version: $DEV_VERSION"
 echo "######################################"
+
+mvn clean install
+STATUS=$?
+if [ $STATUS -eq 0 ]; then
+  echo "Build success!"
+else
+  echo "Build failed!"
+  exit 1
+fi
 
 
 mvn versions:set -DnewVersion=$RELEASE_VERSION
