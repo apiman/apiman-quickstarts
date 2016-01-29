@@ -44,3 +44,13 @@ cd apiman-quickstarts/echo-service
 mvn clean install
 mvn wildfly:deploy
 ----
+
+Running Localy
+==============
+
+You can also run the project locally using the Jetty Web container and access the REST Echo Service at this address `http://localhost:9999/apiman-echo/sample/path`
+
+---
+mvn clean install
+mvn jetty:run
+---
