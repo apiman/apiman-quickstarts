@@ -1,202 +1,210 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.apiman</groupId>
-  <artifactId>apiman-quickstarts</artifactId>
-  <version>1.2.2-SNAPSHOT</version>
-  <name>apiman-quickstarts</name>
-  <packaging>pom</packaging>
+    <groupId>io.apiman</groupId>
+    <artifactId>apiman-quickstarts</artifactId>
+    <version>1.2.2-SNAPSHOT</version>
+    <name>apiman-quickstarts</name>
+    <packaging>pom</packaging>
 
-  <description>This project contains quickstarts for apiman.</description>
-  <url>http://apiman.io/</url>
-  <inceptionYear>2014</inceptionYear>
+    <description>This project contains quickstarts for apiman.</description>
+    <url>http://apiman.io/</url>
+    <inceptionYear>2014</inceptionYear>
 
-  <organization>
-    <name>JBoss, a division of Red Hat</name>
-    <url>http://www.jboss.org</url>
-  </organization>
+    <organization>
+        <name>JBoss, a division of Red Hat</name>
+        <url>http://www.jboss.org</url>
+    </organization>
 
-  <licenses>
-    <license>
-      <name>Apache License Version 2.0</name>
-      <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+    <licenses>
+        <license>
+            <name>Apache License Version 2.0</name>
+            <url>http://repository.jboss.org/licenses/apache-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-  <issueManagement>
-    <system>jira</system>
-    <url>https://issues.jboss.org/browse/APIMAN</url>
-  </issueManagement>
+    <issueManagement>
+        <system>jira</system>
+        <url>https://issues.jboss.org/browse/APIMAN</url>
+    </issueManagement>
 
-  <scm>
-    <connection>scm:git:git@github.com:apiman/apiman-quickstarts.git</connection>
-    <developerConnection>scm:git:git@github.com:apiman/apiman-quickstarts.git</developerConnection>
-    <url>scm:git:git@github.com:apiman/apiman-quickstarts.git</url>
-    <tag>HEAD</tag>
-  </scm>
+    <scm>
+        <connection>scm:git:git@github.com:apiman/apiman-quickstarts.git</connection>
+        <developerConnection>scm:git:git@github.com:apiman/apiman-quickstarts.git</developerConnection>
+        <url>scm:git:git@github.com:apiman/apiman-quickstarts.git</url>
+        <tag>HEAD</tag>
+    </scm>
 
-  <developers>
-    <developer>
-      <name>Eric Wittmann</name>
-      <id>ewittman</id>
-      <email>eric.wittmann@redhat.com</email>
-      <organization>Red Hat</organization>
-      <roles>
-        <role>Tech Lead</role>
-        <role>Developer</role>
-      </roles>
-    </developer>
-  </developers>
+    <developers>
+        <developer>
+            <name>Eric Wittmann</name>
+            <id>ewittman</id>
+            <email>eric.wittmann@redhat.com</email>
+            <organization>Red Hat</organization>
+            <roles>
+                <role>Tech Lead</role>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
 
-  <properties>
-    <!-- Instruct the build to use only UTF-8 encoding for source code -->
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+    <properties>
+        <!-- Instruct the build to use only UTF-8 encoding for source code -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 
-    <version.javadoc.plugin>2.10.1</version.javadoc.plugin>
-    <version.compiler.plugin>3.2</version.compiler.plugin>
-    <version.source.plugin>2.4</version.source.plugin>
-    <version.resources.plugin>2.7</version.resources.plugin>
-    <version.war.plugin>2.5</version.war.plugin>
-    <version.wildfly.plugin>1.0.2.Final</version.wildfly.plugin>
+        <version.javadoc.plugin>2.10.1</version.javadoc.plugin>
+        <version.compiler.plugin>3.2</version.compiler.plugin>
+        <version.source.plugin>2.4</version.source.plugin>
+        <version.resources.plugin>2.7</version.resources.plugin>
+        <version.war.plugin>2.5</version.war.plugin>
+        <version.wildfly.plugin>1.0.2.Final</version.wildfly.plugin>
+        <version.jetty.plugin>9.3.0.v20150612</version.jetty.plugin>
 
-    <maven.compiler.target>1.7</maven.compiler.target>
-    <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
 
-    <!-- Distribution URLs -->
-    <jboss.releases.repo.url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</jboss.releases.repo.url>
-    <jboss.snapshots.repo.url>https://repository.jboss.org/nexus/content/repositories/snapshots/</jboss.snapshots.repo.url>
-  </properties>
+        <!-- Distribution URLs -->
+        <jboss.releases.repo.url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/
+        </jboss.releases.repo.url>
+        <jboss.snapshots.repo.url>https://repository.jboss.org/nexus/content/repositories/snapshots/
+        </jboss.snapshots.repo.url>
+    </properties>
 
-  <distributionManagement>
-    <repository>
-      <id>jboss-releases-repository</id>
-      <name>JBoss Releases Repository</name>
-      <url>${jboss.releases.repo.url}</url>
-    </repository>
-    <snapshotRepository>
-      <id>jboss-snapshots-repository</id>
-      <name>JBoss Snapshots Repository</name>
-      <url>${jboss.snapshots.repo.url}</url>
-    </snapshotRepository>
-  </distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>jboss-releases-repository</id>
+            <name>JBoss Releases Repository</name>
+            <url>${jboss.releases.repo.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>jboss-snapshots-repository</id>
+            <name>JBoss Snapshots Repository</name>
+            <url>${jboss.snapshots.repo.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
-  <modules>
-    <module>echo-service</module>
-  </modules>
+    <modules>
+        <module>echo-service</module>
+    </modules>
 
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>${version.compiler.plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>${version.javadoc.plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>${version.resources.plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <version>${version.source.plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>${version.war.plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.wildfly.plugins</groupId>
-          <artifactId>wildfly-maven-plugin</artifactId>
-          <version>${version.wildfly.plugin}</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
-          <showDeprecation>false</showDeprecation>
-          <showWarnings>false</showWarnings>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-
-  <profiles>
-    <profile>
-      <activation>
-        <file>
-          <exists>src/main/assembly/dist.xml</exists>
-        </file>
-      </activation>
-      <build>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${version.compiler.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${version.javadoc.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${version.resources.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${version.source.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${version.war.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.wildfly.plugins</groupId>
+                    <artifactId>wildfly-maven-plugin</artifactId>
+                    <version>${version.wildfly.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>${version.jetty.plugin}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
-          <plugin>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <inherited>false</inherited>
-            <executions>
-              <execution>
-                <id>make-dist</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>single</goal>
-                </goals>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                  <finalName>apiman-quickstarts-${project.version}</finalName>
-                  <attach>true</attach>
-                  <descriptors>
-                    <descriptor>src/main/assembly/dist.xml</descriptor>
-                  </descriptors>
-                  <tarLongFileMode>gnu</tarLongFileMode>
-                  <appendAssemblyId>false</appendAssemblyId>
-                  <archiverConfig>
-                    <defaultDirectoryMode>0755</defaultDirectoryMode>
-                  </archiverConfig>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <showDeprecation>false</showDeprecation>
+                    <showWarnings>false</showWarnings>
                 </configuration>
-              </execution>
-            </executions>
-          </plugin>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
-      </build>
-    </profile>
-  </profiles>
+    </build>
+
+    <profiles>
+        <profile>
+            <activation>
+                <file>
+                    <exists>src/main/assembly/dist.xml</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-assembly-plugin</artifactId>
+                        <inherited>false</inherited>
+                        <executions>
+                            <execution>
+                                <id>make-dist</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>single</goal>
+                                </goals>
+                                <configuration>
+                                    <finalName>apiman-quickstarts-${project.version}</finalName>
+                                    <attach>true</attach>
+                                    <descriptors>
+                                        <descriptor>src/main/assembly/dist.xml</descriptor>
+                                    </descriptors>
+                                    <tarLongFileMode>gnu</tarLongFileMode>
+                                    <appendAssemblyId>false</appendAssemblyId>
+                                    <archiverConfig>
+                                        <defaultDirectoryMode>0755</defaultDirectoryMode>
+                                    </archiverConfig>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
